@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNet - Relief Requests</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/relief_requests.css">
+</head>
+<body>
+<header>
+    <h1 id="logo">
+        <a href="index.html">
+            ResQNet
+        </a>
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="./incidents.html">Incidents</a></li>
+            <li><a href="./relief_requests.html" class="active-tab">Relief Requests</a></li>
+            <li><a href="./resources.html">Resources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Relief Requests</h1>
+        <p>Connect people with the assistance they need.</p>
+    </section>
+
+    <div id="grid">
+        <section class="requests" id="requests">
+
+        </section>
+
+        <section id="form">
+            <h3>Create Request</h3>
+            <form id="relief-request-form">
+                <div>
+                    <label for="category">Request Category<span style="color:#f00;">*</span></label>
+                    <select name="category" id="category" required>
+                        <option value="" disabled selected style="display: none">Select Request Category</option>
+                        <option value="Medical Assistance">Medical</option>
+                        <option value="Food Supplies">Food</option>
+                        <option value="Temporary Shelter">Shelter</option>
+                        <option value="Water Supplies">Water</option>
+                        <option value="Transport Services">Transport</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="location">Location<span style="color:#f00;">*</span></label>
+                    <input type="text" name="location" id="location" placeholder="Enter Location" required>
+                </div>
+
+                <div>
+                    <label for="people">Number of People<span style="color:#f00;">*</span></label>
+                    <input type="number" name="people" id="people" value="0" required>
+                </div>
+
+                <input type="hidden" value="Pending" name="status">
+
+                <div>
+                    <label for="priority">Priority<span style="color:#f00;">*</span></label>
+                    <select name="priority" id="priority" required>
+                        <option value="" disabled selected style="display: none">Select Priority</option>
+                        <option value="High Priority">High</option>
+                        <option value="Medium Priority">Medium</option>
+                        <option value="Low Priority">Low</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="description">Description<span style="color:#f00;">*</span></label>
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Provide details about the situation and the assistance needed..." required></textarea>
+                </div>
+
+                <button id="button" type="submit">Submit Request</button>
+
+            </form>
+        </section>
+    </div>
+</main>
+
+<script src="./scripts/reliefRequestCard.js"></script>
+</body>
+</html>

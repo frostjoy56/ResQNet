@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNet - Resources</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/resources.css">
+</head>
+<body>
+<header>
+    <h1 id="logo">
+        <a href="index.html">
+            ResQNet
+        </a>
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="./incidents.html">Incidents</a></li>
+            <li><a href="./relief_requests.html">Relief Requests</a></li>
+            <li><a href="./resources.html" class="active-tab">Resources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Available Resources</h1>
+        <p>Keep track of relief supplies across locations</p>
+    </section>
+
+    <section id="record">
+        <div class="resource">
+            <div>
+                <p>Food Supplies</p>
+                <span id="food">0</span>
+            </div>
+        </div>
+
+        <div class="resource">
+            <div>
+                <p>Water</p>
+                <span id="water">0</span>
+            </div>
+        </div>
+
+        <div class="resource">
+            <div>
+                <p>Medical Kits</p>
+                <span id="medical">0</span>
+            </div>
+        </div>
+
+        <div class="resource">
+            <div>
+                <p>Shelter</p>
+                <span id="shelter">0</span>
+            </div>
+        </div>
+
+        <div class="resource">
+            <div>
+                <p>Transport</p>
+                <span id="transport">0</span>
+            </div>
+        </div>
+
+        <div class="resource">
+            <div>
+                <p>Others</p>
+                <span id="others">0</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources">
+        <div>
+            <h2>Resource Inventory</h2>
+        </div>
+        <table>
+            <thead>
+            <tr>
+                <td>Resource</td>
+                <td>Category</td>
+                <td>Quantity</td>
+                <td>Location</td>
+                <td>Availability</td>
+            </tr>
+            </thead>
+
+            <tbody id="tbody">
+<!--            <tr>-->
+<!--                <td>Rice Packets</td>-->
+<!--                <td>Food</td>-->
+<!--                <td>450</td>-->
+<!--                <td>Ludhiana</td>-->
+<!--                <td class="green">Available</td>-->
+<!--            </tr>-->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="form">
+        <div>
+            <h2>Add Resource</h2>
+        </div>
+
+        <form id="add-resource">
+            <div>
+                <div>
+                    <label for="name">Resource Name<span style="color:#f00;">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter Resource Name..." required>
+                </div>
+
+                <div>
+                    <label for="category">Category<span style="color:#f00;">*</span></label>
+                    <select name="category" id="category" required>
+                        <option value="" disabled selected style="display: none;">Select Category...</option>
+                        <option value="Food">Food</option>
+                        <option value="Water">Water</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Shelter">Shelter</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="quantity">Quantity<span style="color:#f00;">*</span></label>
+                    <input type="number" name="quantity" id="quantity" required>
+                </div>
+
+                <div>
+                    <label for="location">Location<span style="color:#f00;">*</span></label>
+                    <input type="text" name="location" id="location" required>
+                </div>
+
+            </div>
+
+            <div>
+                <button type="submit" id="submit">Add Resource</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="./scripts/resources.js"></script>
+</body>
+</html>

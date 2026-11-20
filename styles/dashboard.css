@@ -1,0 +1,193 @@
+:root {
+    --green: #087F6B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #f6fafb;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 3.7rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(8, 127, 107, 0.1);
+    border-radius: 5px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: clamp(0.5rem, 2vw, 2rem);
+}
+
+.hero-btns {
+    padding: clamp(0.5rem, 2vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.hero-btns a {
+    background-color: #fff;
+    border: 1px solid var(--green);
+    display: inline-block;
+    padding: 1rem clamp(0.5rem, 3vw, 3rem);
+    border-radius: 5px;
+    color: var(--green);
+    transition: all 0.3s;
+}
+
+.hero-btns a:hover {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.hero-btns a:first-child {
+    background-color: var(--green);
+    color: #fff;
+}
+
+.hero-btns a:first-child:hover {
+    background-color: #fff;
+    color: var(--green);
+}
+
+#record {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+#record > div {
+    display: flex;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    flex-grow: 1;
+    padding: clamp(0.5rem, 1.3vw, 1.3rem) clamp(0.5rem, 2vw, 2rem);
+    gap: 1rem;
+}
+
+#record div div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#record div img {
+    width: 35px;
+    aspect-ratio: 1;
+}
+
+#record span {
+    font-size: 35px;
+}
+
+#incidents {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#incidents div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.5rem, 1vw, 1rem) clamp(0.5rem, 3vw, 3rem) clamp(0.5rem, 1vw, 1rem) clamp(0.5rem, 1vw, 1rem);
+}
+
+#incidents a {
+    color: var(--green);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    position: relative;
+}
+
+#incidents a::before {
+    content: "";
+    background-image: url("../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    right: -20%;
+    width: 1.2rem;
+    aspect-ratio: 1;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    width: 20%;
+    padding: 0.6rem 1rem;
+}
+
+td:last-child {
+    width: 13%;
+}
+
+.red {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    color: red;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.yellow {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    color: #be7001;
+    background-color: rgba(255, 150, 0, 0.2);
+}
+
+.green {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    color: var(--green);
+    background-color: rgba(0, 197, 0, 0.1);
+}
+
+#incidents thead {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #5b5b5b;
+}
+
+#incidents thead {
+    font-weight: 600;
+}
+
+#incidents tbody a {
+    text-decoration: none;
+}
+
+#incidents table tbody td:first-child {
+    font-weight: 600;
+}

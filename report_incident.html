@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNet - Report Incident</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/report_incident.css">
+</head>
+<body>
+<header>
+    <h1 id="logo">
+        <a href="index.html">
+            ResQNet
+        </a>
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="./incidents.html">Incidents</a></li>
+            <li><a href="./relief_requests.html">Relief Requests</a></li>
+            <li><a href="./resources.html">Resources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Report an Incident</h1>
+        <p>Share the details so relief efforts can be coordinated.</p>
+    </section>
+
+    <section id="form">
+        <form id="report_incident">
+            <div class="first_field">
+                <div>
+                    <label for="disaster_type">Disaster Type<span style="color:#f00;">*</span></label>
+                    <select name="disaster_type" id="disaster_type" required>
+                        <option value="" disabled selected style="display: none;">Select Disaster Type</option>
+                        <option value="Flood">Flood</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Road Collapse">Road Collapse</option>
+                        <option value="Building Damage">Building Damage</option>
+                        <option value="Fallen Trees">Fallen Trees</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="location">Location<span style="color:#f00;">*</span></label>
+                    <input type="text" name="location" id="location" placeholder="Enter Location..." required>
+                </div>
+            </div>
+
+            <div class="second_field">
+                <div>
+                    <label for="severity">Severity<span style="color:#f00;">*</span></label>
+                    <select name="severity" id="severity" required>
+                        <option value="" disabled selected style="display: none;">Select Severity</option>
+                        <option value="High Severity">High</option>
+                        <option value="Medium Severity">Medium</option>
+                        <option value="Low Severity">Low</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="date">Date<span style="color:#f00;">*</span></label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="people_affected">People Affected<span style="color:#f00;">*</span></label>
+                    <input type="number" name="people_affected" id="people_affected" value="0" required>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <label for="description">Description<span style="color:#f00;">*</span></label>
+                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Describe the situation and immediate needs..." required></textarea>
+                </div>
+            </div>
+
+            <input type="hidden" name="status" value="Pending">
+
+            <div class="btn_field">
+                <button id="cancel" type="button">Cancel</button>
+                <button type="submit" id="submit">Submit Report</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="./scripts/reportIncident.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNet - Dashboard</title>
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+<body>
+<header>
+    <h1 id="logo">
+        <a href="./index.html">
+            ResQNet
+        </a>
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html" class="active-tab">Dashboard</a></li>
+            <li><a href="./incidents.html">Incidents</a></li>
+            <li><a href="./relief_requests.html">Relief Requests</a></li>
+            <li><a href="./resources.html">Resources</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <div class="hero-container">
+            <h1>Disaster Relief Coordination</h1>
+            <p>Coordinate incidents, relief requests and available resources from one place.</p>
+        </div>
+
+        <div class="hero-btns">
+            <a href="./report_incident.html">Report Incident</a>
+            <a href="./relief_requests.html">Request Relief</a>
+        </div>
+    </section>
+
+    <section id="record">
+        <div class="active-incidents">
+            <img src="images/alert-triangle.svg">
+            <div>
+                <p>Active Incidents</p>
+                <span id="active-incidents">0</span>
+            </div>
+        </div>
+
+        <div class="pending-requests">
+            <img src="images/clipboard-list.svg">
+            <div>
+                <p>Pending Requests</p>
+                <span id="pending-requests">0</span>
+            </div>
+        </div>
+
+        <div class="resolved-incidents">
+            <img src="images/check.svg">
+            <div>
+                <p>Resolved Incidents</p>
+                <span id="resolved-incidents">0</span>
+            </div>
+        </div>
+
+        <div class="resources">
+            <img src="images/boxes.svg">
+            <div>
+                <p>Resources available</p>
+                <span id="resources-available">0</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="incidents">
+        <div>
+            <h2>Recent Incidents</h2>
+            <a href="./incidents.html">View All incidents</a>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <td>Incident</td>
+                <td>Location</td>
+                <td>Severity</td>
+                <td>Status</td>
+            </tr>
+            </thead>
+            <tbody id="incidents-table">
+<!--            <tr>-->
+<!--                <td>Flood</td>-->
+<!--                <td>Ludhiana</td>-->
+<!--                <td><span class="red">High</span></td>-->
+<!--                <td><span class="yellow">In Progress</span></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>Fire</td>-->
+<!--                <td>Jalandhar</td>-->
+<!--                <td><span class="yellow">Medium</span></td>-->
+<!--                <td><span class="green">Active</span></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>Road Collapse</td>-->
+<!--                <td>Phagwara</td>-->
+<!--                <td><span class="green">Low</span></td>-->
+<!--                <td><span class="green">Resolved</span></td>-->
+<!--            </tr>-->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<script src="./scripts/dashboard.js"></script>
+</body>
+</html>

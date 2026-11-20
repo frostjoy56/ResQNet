@@ -1,0 +1,90 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    min-height: 3.7rem;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    background-color: #f6fffb;
+}
+
+header h1 a {
+    margin-left: clamp(4rem, 10vw, 8rem);
+    color: #000;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    gap: clamp(0.5rem, 3vw, 2rem);
+    list-style: none;
+    height: 100%;
+}
+
+header li {
+    height: 100%;
+}
+
+header a {
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.6rem;
+    margin-right: clamp(2rem, 8vw, 6rem);
+}
+
+header ul li a {
+    transition: all 0.15s ease-in;
+    position: relative;
+}
+
+.active-tab, header ul li a:hover {
+    color: var(--green);
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    border-bottom: 3px solid var(--green);
+    transform: scaleX(0);
+    transition: all 0.15s ease-in;
+}
+
+.active-tab::before, header ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+#logo a {
+    position: relative;
+    font-size: 1.7rem;
+}
+
+#logo a::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 120% 120%;
+    background-position: center;
+    border-radius: 7px;
+    width: 2.05rem;
+    aspect-ratio: 1;
+    background-color: var(--green);
+    left: -35%;
+}

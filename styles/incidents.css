@@ -1,0 +1,211 @@
+:root {
+    --green: #087F6B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #f6fffb;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 3.7rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 7rem;
+    width: 100%;
+    gap: 2rem;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(0.5rem, 2vw, 2rem);
+}
+
+#hero div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+#hero h1 {
+    font-size: 2.65rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#hero a {
+    display: inline-block;
+    background-color: var(--green);
+    color: white;
+    padding: 1rem 2rem 1rem 3.5rem;
+    border-radius: 5px;
+    position: relative;
+    font-size: 1.05rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#hero a::before {
+    content: "";
+    background-image: url("../images/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+#hero a:hover {
+    background-color: white;
+    color: var(--green);
+    box-shadow: 0 0 5px var(--green);
+}
+
+#hero a:hover::before {
+    background-image: url("../images/plus-green.svg");
+}
+
+#incidents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    max-width: 100%;
+}
+
+section p {
+    color: #606060;
+}
+
+#incidents > div {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    padding: clamp(1rem, 1.5vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 8px;
+}
+
+#incidents > div > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#incidents > div > p {
+    position: relative;
+    left: 9%;
+}
+
+#incidents > div > p::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/location.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    left: -9%;
+    top: -10%;
+}
+
+#incidents .extra-info {
+    gap: 2rem;
+    position: relative;
+    border-bottom: 1px solid #606060;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.status .red {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: red;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
+.status .yellow {
+    color: #be7001;
+    background-color: rgba(255, 150, 0, 0.2);
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
+.status .green {
+    color: var(--green);
+    background-color: rgba(0, 197, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
+.extra-info p:first-child {
+    position: relative;
+    left: 8%;
+}
+
+.extra-info p:last-child {
+    position: relative;
+    left: 15%;
+}
+
+.extra-info p:first-child::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/people.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1.25rem;
+    aspect-ratio: 1;
+    left: -20%;
+}
+
+.extra-info p:last-child::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/calendar.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1.25rem;
+    aspect-ratio: 1;
+    left: -30%;
+    top: -5%;
+}
+
+#incidents a {
+    color: var(--green);
+    position: relative;
+}
+
+#incidents a::before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 1.35rem;
+    aspect-ratio: 1;
+    left: 27.5%;
+    rotate: 270deg;
+    top: -10%;
+}
